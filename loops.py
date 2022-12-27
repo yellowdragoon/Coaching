@@ -6,7 +6,7 @@ import time
 
 # for loops/while loops - repeated execution of code
 
-# while [condition]:
+# while [condition (boolean)]: (check condition every time we want to run the code inside the while loop)
 #   do some code
 
 
@@ -17,12 +17,12 @@ import time
 counter = 1 # represent the number of seconds that have passed
 
 while counter < 10:
-    time.sleep(1)
+    #time.sleep(1)
     counter = counter + 1
     print(counter)
 
 
-test = 10
+test = 0
 
 # write a while loop that will:
 # check if test is a positive number
@@ -30,6 +30,6 @@ test = 10
 # subtract 3 from it
 # print the value of test
 
-
-
-
+while test > 0:
+    test -= 3   # test = test - 3 (subtract 3 from test)
+    print(test)
