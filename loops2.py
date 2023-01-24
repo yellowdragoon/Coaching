@@ -35,7 +35,7 @@ for i in range(1, 101): # i = 1; i = 2; ... i = 100
 
 print(total)
 
-
+print("EXERCISE")
 # write a for loop that prints out all the EVEN numbers from 1 to 50
 # 2 4 6 ... 50 
 # HINT: use a conditional inside of the for loop
@@ -43,8 +43,19 @@ print(total)
 #         eg. 20 % 3 = 2
 # TIP: be careful of proper indenting!
 
+# Solution:
+for i in range(1, 51):
+    # if i is even: print i
+    if i % 2 == 0:
+        print(i)
+
+
 # for loop:
 #   if statement:
 #       code inside of the if statement
 #
 #   code outside of the if statement BUT inside of the for loop
+
+
+# Pseudocode: code we write in comments (not proper code) but it helps us structure and plan our code
+# Modulus operator: % gives us the remainder when we divide by something
