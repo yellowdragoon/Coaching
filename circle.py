@@ -16,7 +16,7 @@ circumference = 2 * pi * r
 print("The circumference of the circle is " + str(circumference))
 
 # Tutorial: how to iterate through elements in a list
-list_nums = [2, 45, 35, 3, 0, 1]
+list_nums = [2, 45, 35, 3, 0, 1, 45, 12, 34]
 #print(list_nums[2])
 #list_nums[0]
 #list_nums[1]
@@ -29,6 +29,21 @@ for i in range(list_size): # 0..number of items-1
 
 # Exercise: get the sum of all numbers in a list, print it out as usual.
 # Do not list_nums[0] + list_nums[1] + ... 
+
+# x = 2
+# x = 9
+# x = x + 2
+# x += 2
+
+# Solution:
+total = 0
+#for i in range(len(list_nums)):
+#    total += list_nums[i]
+for num in list_nums:
+    total += num
+
+print(total)
+
 
 
 
