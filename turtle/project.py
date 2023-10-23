@@ -18,30 +18,52 @@ die_numbers = [1, 2, 3, 4, 5, 6]
 t.color("red")
 t.shape("turtle")
 
+distance = 750
+
 t.penup()
 t.goto(-400, 300)
-t.forward(750)
+t.forward(distance)
 t.pendown()
 t.dot(50)
 t.penup()
-t.back(750)
+t.back(distance)
 
 t2 = t.clone()
 t2.goto(-400, 100)
 t2.color("blue")
-t2.forward(750)
+t2.forward(distance)
 t2.pendown()
 t2.dot(50)
 t2.penup()
-t2.back(750)
+t2.back(distance)
+
+steps_left_1 = distance
+steps_left_2 = distance
+speed = 30
 
 while True:
-    random.choice(die_numbers)
     # For turtle 1, pick a random number from the list
     # Move that turtle forward by that number of steps
     # Use the time library to wait 0.5 seconds
     # Do the same for the second turtle
+    steps = speed * random.choice(die_numbers)
+    steps_left_1 -= steps
 
+    if steps_left_1 <= 0:
+        print("Turtle 1 won!")
+        break
 
+    t.forward(steps)
+    time.sleep(0.5)
+
+    steps = speed * random.choice(die_numbers)
+    steps_left_2 -= steps
+
+    if steps_left_2 <= 0:
+        print("Turtle 2 won!")
+        break
+
+    t2.forward(steps)
+    time.sleep(0.5)
 
 t.mainloop()
